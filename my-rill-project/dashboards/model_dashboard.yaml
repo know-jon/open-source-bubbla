@@ -1,0 +1,91 @@
+# Visit https://docs.rilldata.com/reference/project-files to learn more about Rill project files.
+
+title: model_dashboard
+model: model
+timeseries: date
+measures:
+  - label: Total records
+    expression: count(*)
+    name: total_records
+    description: Total number of records present
+    format_preset: humanize
+    valid_percent_of_total: true
+  - label: avg(value)
+    expression: avg(value)
+    name: mean(value)
+    description: avg of Value
+    format_preset: humanize
+    valid_percent_of_total: true
+  - label: avg(percent_change)
+    expression: avg(percent_change)
+    name: sum(percent_change)
+    description: avg of Percent_change
+    format_preset: humanize
+    valid_percent_of_total: true
+  - label: avg(normalized_by_index)
+    expression: avg(normalized_by_index)
+    name: avg(normalized_by_index)
+    description: average of value normalized to index based on the first of the observation period
+    format_preset: humanize
+    valid_percent_of_total: true
+dimensions:
+  - name: currency_code
+    label: Currency_code
+    column: currency_code
+    description: ""
+  - name: currency_full_name
+    label: Currency_full_name
+    column: currency_full_name
+    description: ""
+  - name: is_independent
+    label: Is_independent
+    column: is_independent
+    description: ""
+  - name: is_developed
+    label: Is_developed
+    column: is_developed
+    description: ""
+  - name: sub_region
+    label: Sub_region
+    column: sub_region
+    description: ""
+  - name: region
+    label: Region
+    column: region
+    description: ""
+  - name: lldc
+    label: Lldc
+    column: lldc
+    description: ""
+  - name: intermediate_region_name
+    label: Intermediate_region_name
+    column: intermediate_region_name
+    description: ""
+  - name: official_name
+    label: Official_name
+    column: official_name
+    description: ""
+  - name: region_name
+    label: Region_name
+    column: region_name
+    description: ""
+  - name: Continent
+    label: Continent
+    column: Continent
+    description: ""
+  - name: language
+    label: Language
+    column: language
+    description: ""
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney

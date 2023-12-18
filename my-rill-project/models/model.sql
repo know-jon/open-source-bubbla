@@ -1,0 +1,1 @@
+SELECT *, 100 * value / first_value(value) over (partition by currency_code order by date ASC) as normalized_by_index FROM obt_currency

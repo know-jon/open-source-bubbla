@@ -1,0 +1,11 @@
+version: 3 
+
+services:
+  jupyter:
+      image: jupyter/minimal-notebook
+      ports:
+        - "8888:8888"
+      volumes:
+        - ./work:/home/jovyan/work
+      network_mode: host
+      userns_mode: keep-id

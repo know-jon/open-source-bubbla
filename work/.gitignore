@@ -1,0 +1,6 @@
+data/
+output/
+*.db
+*.db.wal
+*.png
+.ipynb_checkpoints/
